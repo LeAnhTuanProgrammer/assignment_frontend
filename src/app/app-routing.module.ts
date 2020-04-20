@@ -17,7 +17,7 @@ import { ManagerNewsComponent } from './manager-news/manager-news.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
-
+import { NewsAddComponent } from './news-add/news-add.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   {path:'home',component:HomeComponent},
@@ -30,6 +30,7 @@ const routes: Routes = [
   {path:'product/edit/:productID',component:ProductEditComponent},
   {path:'product/:productID',component:ProductDetailComponent},
   {path:'news',component:ProductAddComponent},
+  {path:'New',component:NewsAddComponent},
  
 ]
 },
