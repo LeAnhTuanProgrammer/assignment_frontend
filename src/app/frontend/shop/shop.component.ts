@@ -9,6 +9,8 @@ import { Product } from '../../Product';
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent implements OnInit {
+  page= 1;
+pageSize= 5;
 constructor(
     private productService: ProductService
   ) { 

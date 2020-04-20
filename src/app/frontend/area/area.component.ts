@@ -7,6 +7,8 @@ import { Product } from '../../Product';
   styleUrls: ['./area.component.css']
 })
 export class AreaComponent implements OnInit {
+  page= 1;
+pageSize= 5;
 selected: Product;
   products: Product[];
   constructor(

@@ -42,12 +42,12 @@
           		<div class="new-products ptb-70">
 						<div class="container">
 							<div class="row">
-								<div class="section-title col-lg-12 mb-50">
+								<div class="section-title col-lg-12 ">
 									<h2>Our Collections <i class="fa fa-shopping-cart"></i></h2>
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-xl-12 col-lg-12 ">
+								<div class="col-xl-12 col-lg-6 " >
 									<!-- New Pro Content End -->
 									<div class="new-kiosk-product-content">
 										<div class="kiosk-tab-header tab-bg">
@@ -144,3 +144,7 @@
 						</div>
 
 					</div>
+          <ngb-pagination
+  [(page)]="page"
+  [pageSize]="pageSize" class="d-flex justify-content-center"
+  [collectionSize]="products.length"></ngb-pagination>
