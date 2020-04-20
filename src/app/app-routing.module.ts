@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { HomeComponent } from './frontend/home/home.component';
 import { ShopComponent } from './frontend/shop/shop.component';
