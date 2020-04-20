@@ -1,4 +1,22 @@
-<h2>Show details</h2><br><br>
+
+ <div class="kiosk-header-top">
+<div class="container">
+
+<app-header></app-header>
+</div>
+</div>
+
+<div class="kiosk-header-bottom header-sticky">
+	<div class="container">
+		<div class="row">
+      <div class="col-xl-3 col-lg-2 col-sm-5 col-5">
+				<div class="logo">
+					<a href="home.html"><img src="https://i.ibb.co/y8c2Cvw/unnamed.png" width="50px"></a>
+				</div>
+			</div>
+<app-menu></app-menu>
+	<div class="slider-area kiosk-slider">
+			<h2>Show details</h2><br><br>
  <div *ngIf="product">
  <div class="kiosk-product-thumb">
                             <div class="thumb-menu nav">
@@ -21,10 +39,15 @@
                             </div>
                             <div class="product-link">
                                 <ul class="list-inline">
-                                    <li><a href="#">add to cart</a></li>
-                                    <li><a href="#">Wishlist</a></li>
+                                    <li><a routerLink="/cart" routerLinkActive="active">add to cart</a></li>
+                                    <li><a routerLink="/checkout" routerLinkActive="active">Wishlist</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
  </div>
+<app-footer></app-footer>
+	</div>
+	</div>
+</div>
+</div>

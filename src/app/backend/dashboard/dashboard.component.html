@@ -185,8 +185,8 @@
             <div class="col-md-7 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <p class="card-title">Cash deposits</p>
-                  <p class="mb-4">To start a blog, think of a topic about and first brainstorm party is ways to write details</p>
+                  <p class="card-title">ImgsImgs</p>
+                  	<img src="https://i.imgur.com/4ohyefQh.jpg" width="500px" height="00px" >
                   <div id="cash-deposits-chart-legend" class="d-flex justify-content-center pt-3"></div>
                   <canvas id="cash-deposits-chart"></canvas>
                 </div>
@@ -218,8 +218,8 @@
                             <th>Status report</th>
                             <th>Office</th>
                             <th>Price</th>
-                            <th>Date</th>
-                            <th>Gross amount</th>
+                            <th>Update</th>
+                            <th>Delete</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -228,8 +228,11 @@
                             <td>{{product.name}}</td>
                             <td>${{product.price}}</td>
                             <td>{{product.desc}}</td>
+                            
                           <td><img [src]="product.img" width="200px"></td>
-                     
+                     <td><button class="btn btn-primary" routerLink="../product/edit/{{product.id}}" >Update</button></td>
+          <td> <button   class="btn btn-primary" (click)="removeItem(product.id)">Delete</button></td>
+     
                         </tr>
                        
                        

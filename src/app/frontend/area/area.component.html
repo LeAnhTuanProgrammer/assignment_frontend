@@ -13,7 +13,7 @@
 										<div class="kiosk-product-img">
 											<a routerLink="/product/{{product.id}}">
 												<img class="first-img" [src]="product.img" alt="single-product">
-												<img class="second-img" [src]="product.img" alt="single-product">
+											
                                 </a>
 										</div>
 										<!-- Product Image End -->
@@ -23,9 +23,9 @@
 											<h4><a routerLink="/product/{{product.id}}">{{product.name}}</a></h4>
 											<div class="kiosk-product-action">
 												<div class="kiosk-action-content">
-													<a href="wishlist.html" data-toggle="tooltip"
+													<a routerLink="/checkout" routerLinkActive="active" data-toggle="tooltip"
 														title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-													<a href="cart.html" data-toggle="tooltip"
+													<a routerLink="/cart" routerLinkActive="active" data-toggle="tooltip"
 														title="Add to Cart"><i class="fa fa-shopping-cart"></i></a>
 													<a routerLink="/product/{{product.id}}" data-toggle="tooltip"
 														title="Product Details"><i class="fa fa-link"></i></a>
@@ -69,7 +69,7 @@
 														<div class="kiosk-product-img">
 															<a routerLink="/product/{{product.id}}">
 																<img class="first-img" [src]="product.img" alt="single-product">
-																<img class="second-img" [src]="product.img" alt="single-product">
+															
                                                 </a>
 														</div>
 														<!-- Product Image End -->
@@ -81,9 +81,9 @@
 															</h4>
 															<div class="kiosk-product-action">
 																<div class="kiosk-action-content">
-																	<a href="wishlist.html" data-toggle="tooltip"
+																	<a routerLink="/checkout" routerLinkActive="active" data-toggle="tooltip"
 																		title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-																	<a href="cart.html" data-toggle="tooltip"
+																	<a routerLink="/cart" routerLinkActive="active" data-toggle="tooltip"
 																		title="Add to Cart"><i class="fa fa-shopping-cart"></i></a>
 																	<a routerLink="/product/{{product.id}}"
 																		data-toggle="tooltip"

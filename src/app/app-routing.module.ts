@@ -13,7 +13,7 @@ import { DashboardComponent } from './backend/dashboard/dashboard.component';
 import { ManagerComponent } from './backend/manager/manager.component';
 import { ManagerNewsComponent } from './backend/manager-news/manager-news.component';
 import { ProductAddComponent } from './backend/product-add/product-add.component';
-import { ProductDetailComponent } from './backend/product-detail/product-detail.component';
+import { ProductDetailComponent } from './frontend/product-detail/product-detail.component';
 import { ProductEditComponent } from './backend/product-edit/product-edit.component';
 import { NewsAddComponent } from './backend/news-add/news-add.component';
 const routes: Routes = [
@@ -37,7 +37,8 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
    {path:'about',component:AboutComponent},
    {path:'cart',component:CartComponent},
-   {path:'checkout',component:CheckoutComponent}
+   {path:'checkout',component:CheckoutComponent},
+   {path:'product/:productID',component:ProductDetailComponent}
 ];
 
 @NgModule({

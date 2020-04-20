@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
+import { ProductService } from './product.service';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -24,13 +25,14 @@ import { DashboardComponent } from './backend/dashboard/dashboard.component';
 import { ManagerComponent } from './backend/manager/manager.component';
 import { ManagerNewsComponent } from './backend/manager-news/manager-news.component';
 import { ProductAddComponent } from './backend/product-add/product-add.component';
-import { ProductDetailComponent } from './backend/product-detail/product-detail.component';
+import { ProductDetailComponent } from './frontend/product-detail/product-detail.component';
 import { ProductEditComponent } from './backend/product-edit/product-edit.component';
 import { NewsAddComponent } from './backend/news-add/news-add.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule ,NgbModule ],
   declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, MenuComponent, SliderComponent, AreaComponent, FooterComponent, ShopComponent, NewsComponent, LoginComponent, AboutComponent, CartComponent, CheckoutComponent, AdminComponent, DashboardComponent, ManagerComponent, ManagerNewsComponent, ProductAddComponent, ProductDetailComponent, ProductEditComponent, NewsAddComponent  ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+   providers: [ProductService]
 })
 export class AppModule { }
