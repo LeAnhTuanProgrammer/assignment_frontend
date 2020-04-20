@@ -1,0 +1,35 @@
+<br>
+<h4>
+Product list management</h4>
+<br>
+
+ <td><button class="btn btn-primary" routerLink="../news" routerLinkActive="active">Add new</button></td>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Desk</th>
+      
+        <th scope="col">Image</th>
+        <th scope="col">Chi tiết</th>
+        <th scope="col">Sửa</th>
+        <th scope="col">Xóa</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products" >
+        <th scope="row">{{product.name}}</th>
+        <td>${{product.price}}</td>
+        <td>{{product.desc}}</td>
+     
+         <td><img [src]="product.img" width="200px"></td>
+       
+        <td><button class="btn btn-primary" routerLink="../product/{{product.id}}">
+Detail</button></td>
+        <td><button class="btn btn-primary" routerLink="../product/edit/{{product.id}}" >Update</button></td>
+          <td> <button   class="btn btn-primary" (click)="removeItem(product.id)">Delete</button></td>
+      </tr>
+      
+    </tbody>
+  </table>

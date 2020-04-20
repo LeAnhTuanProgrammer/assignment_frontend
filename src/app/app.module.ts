@@ -19,10 +19,13 @@ import { LoginComponent } from './frontend/login/login.component';
 import { AboutComponent } from './frontend/about/about.component';
 import { CartComponent } from './frontend/cart/cart.component';
 import { CheckoutComponent } from './frontend/checkout/checkout.component';
+import { AdminComponent } from './admin/admin.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ManagerComponent } from './manager/manager.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule ,NgbModule ],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, MenuComponent, SliderComponent, AreaComponent, FooterComponent, ShopComponent, NewsComponent, LoginComponent, AboutComponent, CartComponent, CheckoutComponent  ],
+  declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, MenuComponent, SliderComponent, AreaComponent, FooterComponent, ShopComponent, NewsComponent, LoginComponent, AboutComponent, CartComponent, CheckoutComponent, AdminComponent, DashboardComponent, ManagerComponent  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
