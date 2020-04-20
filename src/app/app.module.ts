@@ -13,10 +13,12 @@ import { MenuComponent } from './menu/menu.component';
 import { SliderComponent } from './slider/slider.component';
 import { AreaComponent } from './area/area.component';
 import { FooterComponent } from './footer/footer.component';
+import { ShopComponent } from './shop/shop.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule ,NgbModule ],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, MenuComponent, SliderComponent, AreaComponent, FooterComponent  ],
+  declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, MenuComponent, SliderComponent, AreaComponent, FooterComponent, ShopComponent, NewsComponent  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
