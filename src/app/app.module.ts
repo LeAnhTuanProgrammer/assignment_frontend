@@ -22,10 +22,14 @@ import { CheckoutComponent } from './frontend/checkout/checkout.component';
 import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ManagerComponent } from './manager/manager.component';
+import { ManagerNewsComponent } from './manager-news/manager-news.component';
+import { ProductAddComponent } from './product-add/product-add.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule ,NgbModule ],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, MenuComponent, SliderComponent, AreaComponent, FooterComponent, ShopComponent, NewsComponent, LoginComponent, AboutComponent, CartComponent, CheckoutComponent, AdminComponent, DashboardComponent, ManagerComponent  ],
+  declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, MenuComponent, SliderComponent, AreaComponent, FooterComponent, ShopComponent, NewsComponent, LoginComponent, AboutComponent, CartComponent, CheckoutComponent, AdminComponent, DashboardComponent, ManagerComponent, ManagerNewsComponent, ProductAddComponent, ProductDetailComponent, ProductEditComponent  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

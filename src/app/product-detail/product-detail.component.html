@@ -1,0 +1,30 @@
+<h2>Show details</h2><br><br>
+ <div *ngIf="product">
+ <div class="kiosk-product-thumb">
+                            <div class="thumb-menu nav">
+                                    <a class="active" data-toggle="tab" href="#thumb1"> <img [src]="product.img" alt="kiosk-product-thumb"></a>
+                                   
+                            </div>
+                        </div>
+                          <div class="col-lg-7">
+                        <div class="kiosk-product-description fix">
+                            <h3 class="product-header head-h3">{{product.name}}</h3>
+                            <div class="pro-price mb-10">
+                                <p class="product-price"><span class="price">${{product.price}}</span></p>
+                            </div>
+                            <p class="pb-20 border-bottom">{{product.desc}}</p>
+                            <div class="box-quantity">
+                                <form action="#">
+                                    <label for="">Quantity</label>
+                                    <input class="number" id="numeric" type="number" min="1" value="1">
+                                </form>
+                            </div>
+                            <div class="product-link">
+                                <ul class="list-inline">
+                                    <li><a href="#">add to cart</a></li>
+                                    <li><a href="#">Wishlist</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+ </div>

@@ -13,6 +13,11 @@ import { CheckoutComponent } from './frontend/checkout/checkout.component';
 import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ManagerComponent } from './manager/manager.component';
+import { ManagerNewsComponent } from './manager-news/manager-news.component';
+import { ProductAddComponent } from './product-add/product-add.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   {path:'home',component:HomeComponent},
@@ -21,6 +26,10 @@ const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   {path:'dashboard',component:DashboardComponent},
   {path:'manager',component:ManagerComponent},
+  {path:'manager_new',component:ManagerNewsComponent},
+  {path:'product/edit/:productID',component:ProductEditComponent},
+  {path:'product/:productID',component:ProductDetailComponent},
+  {path:'news',component:ProductAddComponent},
  
 ]
 },
