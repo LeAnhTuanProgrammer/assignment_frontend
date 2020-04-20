@@ -19,14 +19,14 @@ import { LoginComponent } from './frontend/login/login.component';
 import { AboutComponent } from './frontend/about/about.component';
 import { CartComponent } from './frontend/cart/cart.component';
 import { CheckoutComponent } from './frontend/checkout/checkout.component';
-import { AdminComponent } from './admin/admin.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { ManagerComponent } from './manager/manager.component';
-import { ManagerNewsComponent } from './manager-news/manager-news.component';
-import { ProductAddComponent } from './product-add/product-add.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { ProductEditComponent } from './product-edit/product-edit.component';
-import { NewsAddComponent } from './news-add/news-add.component';
+import { AdminComponent } from './backend/admin/admin.component';
+import { DashboardComponent } from './backend/dashboard/dashboard.component';
+import { ManagerComponent } from './backend/manager/manager.component';
+import { ManagerNewsComponent } from './backend/manager-news/manager-news.component';
+import { ProductAddComponent } from './backend/product-add/product-add.component';
+import { ProductDetailComponent } from './backend/product-detail/product-detail.component';
+import { ProductEditComponent } from './backend/product-edit/product-edit.component';
+import { NewsAddComponent } from './backend/news-add/news-add.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule ,NgbModule ],
