@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { HomeComponent } from './home/home.component';
-import { ShopComponent } from './shop/shop.component';
-import { NewsComponent } from './news/news.component';
-import { LoginComponent } from './login/login.component';
-import { AboutComponent } from './about/about.component';
-import { CartComponent } from './cart/cart.component';
-import { CheckoutComponent } from './checkout/checkout.component';
+
+import { HomeComponent } from './frontend/home/home.component';
+
+import { ShopComponent } from './frontend/shop/shop.component';
+import { NewsComponent } from './frontend/news/news.component';
+import { LoginComponent } from './frontend/login/login.component';
+import { AboutComponent } from './frontend/about/about.component';
+import { CartComponent } from './frontend/cart/cart.component';
+import { CheckoutComponent } from './frontend/checkout/checkout.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   {path:'home',component:HomeComponent},
