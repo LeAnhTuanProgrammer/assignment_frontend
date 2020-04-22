@@ -28,7 +28,7 @@ const routes: Routes = [
   {path:'product/edit/:productID',component:ProductEditComponent},
   {path:'product/:productID',component:ProductDetailComponent},
   {path:'news',component:ProductAddComponent},
-  {path:'New',component:NewsAddComponent},
+  {path:'New1',component:NewsAddComponent},
  
 ]
 },
