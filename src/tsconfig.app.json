@@ -1,0 +1,18 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "paths": {  
+      "moment": ["..."],
+      "core-js/es7/reflect": [
+         "./node_modules/core-js/proposals/reflect-metadata"
+       ]
+    }},
+  "files": [
+    "main.ts",
+    "polyfills.ts"
+  ],
+  "include": [
+    "**/*.d.ts"
+  ]
+}
+

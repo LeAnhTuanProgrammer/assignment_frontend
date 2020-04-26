@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { ProductService } from './product.service';
+import { NewsService } from './news.service';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -28,11 +30,12 @@ import { ProductAddComponent } from './backend/product-add/product-add.component
 import { ProductDetailComponent } from './frontend/product-detail/product-detail.component';
 import { ProductEditComponent } from './backend/product-edit/product-edit.component';
 import { NewsAddComponent } from './backend/news-add/news-add.component';
+import { NewsEditComponent } from './backend/news-edit/news-edit.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule ,NgbModule ],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, MenuComponent, SliderComponent, AreaComponent, FooterComponent, ShopComponent, NewsComponent, LoginComponent, AboutComponent, CartComponent, CheckoutComponent, AdminComponent, DashboardComponent, ManagerComponent, ManagerNewsComponent, ProductAddComponent, ProductDetailComponent, ProductEditComponent, NewsAddComponent  ],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule ,NgbModule, ReactiveFormsModule ],
+  declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, MenuComponent, SliderComponent, AreaComponent, FooterComponent, ShopComponent, NewsComponent, LoginComponent, AboutComponent, CartComponent, CheckoutComponent, AdminComponent, DashboardComponent, ManagerComponent, ManagerNewsComponent, ProductAddComponent, ProductDetailComponent, ProductEditComponent, NewsAddComponent, NewsEditComponent  ],
   bootstrap:    [ AppComponent ],
-   providers: [ProductService]
+   providers: [ProductService,NewsService]
 })
 export class AppModule { }

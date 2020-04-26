@@ -18,17 +18,17 @@ News list management</h4>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let News of products" >
+      <tr *ngFor="let News of news">
         <th scope="row">{{News.name}}</th>
      
      
          <td><img [src]="News.img" width="200px"></td>
-        <td>{{News.content}}</td>
+        <td>{{News.desc}}</td>
         <td><button class="btn btn-primary" >
 Detail</button></td>
-        <td><button class="btn btn-primary"  >Update</button></td>
-          <td> <button   class="btn btn-primary" >Delete</button></td>
+        <td><button class="btn btn-primary" routerLink="../News/edit/{{News.id}}" >Update</button></td>
+          <td> <button   class="btn btn-primary"  (click)="removeItem(News.id)" >Delete</button></td>
       </tr>
-      
+   
     </tbody>
   </table>

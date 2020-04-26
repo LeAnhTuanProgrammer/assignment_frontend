@@ -16,6 +16,7 @@ import { ProductAddComponent } from './backend/product-add/product-add.component
 import { ProductDetailComponent } from './frontend/product-detail/product-detail.component';
 import { ProductEditComponent } from './backend/product-edit/product-edit.component';
 import { NewsAddComponent } from './backend/news-add/news-add.component';
+import { NewsEditComponent } from './backend/news-edit/news-edit.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   {path:'home',component:HomeComponent},
@@ -29,7 +30,7 @@ const routes: Routes = [
   {path:'product/:productID',component:ProductDetailComponent},
   {path:'news',component:ProductAddComponent},
   {path:'New1',component:NewsAddComponent},
- 
+  {path:'News/edit/:NewsID',component:NewsEditComponent},
 ]
 },
   {path:'shop',component:ShopComponent},
@@ -42,7 +43,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
