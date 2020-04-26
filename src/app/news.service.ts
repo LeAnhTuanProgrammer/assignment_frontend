@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class NewsService {
- api1 = 'http://5e7f9bd27a92ed0016560818.mockapi.io/News';
+ api1 = 'https://5e7f9bd27a92ed0016560818.mockapi.io/News';
 
   constructor(
     private http: HttpClient
