@@ -8,8 +8,7 @@ import { Product } from '../../Product';
 })
 export class HeaderComponent implements OnInit {
 searchText;
-  page= 1;
-pageSize= 5;
+
 selected: Product;
   products: Product[];
   constructor(
