@@ -10,7 +10,7 @@
 				<div class="kiosk-header-top-right">
 					<div class="search-box-view">
 						<form action="#">
-							<input type="text" class="email" placeholder="Search Your Product" name="product">
+							<input type="text" class="email" [(ngModel)]="searchText"   autocomplete="off"placeholder="Search Your Product" name="search">
 							<button type="submit" class="submit"></button>
 						</form>
 					</div>

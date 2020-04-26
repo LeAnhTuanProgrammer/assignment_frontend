@@ -11,6 +11,7 @@ export class AreaComponent implements OnInit {
 pageSize= 5;
 selected: Product;
   products: Product[];
+  
   constructor(
     private productService: ProductService
   ) { 

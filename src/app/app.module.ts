@@ -7,6 +7,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { ProductService } from './product.service';
 import { NewsService } from './news.service';
+ 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -33,7 +35,7 @@ import { NewsAddComponent } from './backend/news-add/news-add.component';
 import { NewsEditComponent } from './backend/news-edit/news-edit.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule ,NgbModule, ReactiveFormsModule ],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule ,NgbModule, ReactiveFormsModule,Ng2SearchPipeModule ],
   declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, MenuComponent, SliderComponent, AreaComponent, FooterComponent, ShopComponent, NewsComponent, LoginComponent, AboutComponent, CartComponent, CheckoutComponent, AdminComponent, DashboardComponent, ManagerComponent, ManagerNewsComponent, ProductAddComponent, ProductDetailComponent, ProductEditComponent, NewsAddComponent, NewsEditComponent  ],
   bootstrap:    [ AppComponent ],
    providers: [ProductService,NewsService]
