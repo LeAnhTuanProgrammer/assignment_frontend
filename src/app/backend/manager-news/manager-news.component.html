@@ -1,34 +1,25 @@
 <br>
 <h4>
-News list management</h4>
+  News list management</h4>
 <br>
 
-
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Name</th>
-     
-        <th scope="col">Image</th>
-      
-        <th scope="col">Content</th>
-        <th scope="col">Chi tiết</th>
-        <th scope="col">Sửa</th>
-        <th scope="col">Xóa</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let News of news">
-        <th scope="row">{{News.name}}</th>
-     
-     
-         <td><img [src]="News.img" width="200px"></td>
-        <td>{{News.desc}}</td>
-        <td><button class="btn btn-primary" >
-Detail</button></td>
-        <td><button class="btn btn-primary" routerLink="../News/edit/{{News.id}}" >Update</button></td>
-          <td> <button   class="btn btn-primary"  (click)="removeItem(News.id)" >Delete</button></td>
-      </tr>
-   
-    </tbody>
-  </table>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Image</th>
+      <th scope="col">Content</th>
+      <th scope="col">Sửa</th>
+      <th scope="col">Xóa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let News of news">
+      <th scope="row">{{News.name}}</th>
+      <td><img [src]="News.img" width="200px"></td>
+      <td>{{News.desc}}</td>
+      <td><button class="btn btn-primary" routerLink="../News/edit/{{News.id}}">Update</button></td>
+      <td> <button class="btn btn-primary" (click)="removeItem(News.id)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>

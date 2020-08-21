@@ -6993,6 +6993,7 @@ legend {
 
 .purchase-area a {
   padding: 15px 50px;
+  
   font-size: 20px;
   border-radius: 30px;
   background: #444;
@@ -7082,6 +7083,7 @@ textarea {
   border-radius: 100%;
   color: #fff;
   font-size: 11px;
+  
   height: 20px;
   left: 50%;
   line-height: 20px;
@@ -7164,17 +7166,21 @@ padding: 0px !important;
 }
 .kiosk-product-img {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 #list-view .kiosk-product-img{
   margin-bottom: 0px !important;
 }
 .kiosk-product-img img {
-  width: 100%;
+  width: 60%;
+  height: 50%;
+  display: block;
+   margin-left: auto;
+    margin-right: auto;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .kiosk-product-img .second-img {
@@ -8087,3 +8093,13 @@ body {
   width: 100%;
 }
 
+.Search{
+
+  width: 547px;
+  
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 29px;
+  padding: 10px;
+  padding-left: 25px;
+  }

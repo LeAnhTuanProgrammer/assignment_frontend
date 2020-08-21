@@ -1,57 +1,56 @@
 <div class="kiosk-header-top">
-<div class="container">
-
-<app-header></app-header>
+	<div class="container">
+		<app-header></app-header>
+	</div>
 </div>
-</div>
-
 <div class="kiosk-header-bottom header-sticky">
 	<div class="container">
 		<div class="row">
-      <div class="col-xl-3 col-lg-2 col-sm-5 col-5">
+			<div class="col-xl-3 col-lg-2 col-sm-5 col-5">
 				<div class="logo">
 					<a href="home.html"><img src="https://i.ibb.co/y8c2Cvw/unnamed.png" width="50px"></a>
 				</div>
 			</div>
-<app-menu></app-menu>
-	<div class="slider-area kiosk-slider">
-					<div class="container">
-				<div class="breadcrumb">
-					<ul>
-						<li><a href="index-1.html">Home</a></li>
-						<li class="active"><a href="login.html">Login</a></li>
-					</ul>
+			<app-menu></app-menu>
+			<div class="slider-area kiosk-slider">
+				<div class="container">
+					<div class="breadcrumb">
+						<ul>
+							<li><a href="index-1.html">Home</a></li>
+							<li class="active"><a href="login.html">Login</a></li>
+						</ul>
+					</div>
 				</div>
-			</div>
-			<!-- Container End -->
-		
-		<!-- Container End -->
-
-		<div class="log-in ptb-70">
-			<div class="container">
-				<div class="row">
-					<!-- New Customer Start -->
-					<div class="col-sm-6">
-						<div class="well">
-							<div class="kiosk-login">
-								<h3 class="mb-10">Log in to your account</h3>
-								<p class="mb-10"><strong>Welcome to your account</strong></p>
-								<form action="#">
-									<div class="form-group">
-										<label class="control-label">Email</label>
-										<input type="text" name="email" placeholder="Email" id="input-email" class="form-control">
-                                    </div>
-										<div class="form-group">
-											<label class="control-label">Password</label>
-											<input type="text" name="pass" placeholder="Password" id="input-password" class="form-control">
-                                    </div>
-											<input type="submit" value="Login" class="kiosk-login-btn">
-                                </form>
-										</div>
+				<div class="log-in ptb-70">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="well">
+									<div class="kiosk-login">
+										<h3 class="mb-10">Log in to your account</h3>
+										<p class="mb-10"><strong>Welcome to your account</strong></p>
+										<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+											<div class="form-group">
+												<label class="control-label" for="username" >Username</label>
+												<input type="text" name="email" formControlName="username"  placeholder="Email" id="input-email"
+													class="form-control" ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+													<div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+														<div *ngIf="f.username.errors.required">Username is required</div>
+													</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label" for="password" >Password</label>
+												<input type="text" name="pass" formControlName="password"  placeholder="Password"
+													id="input-password" class="form-control"[ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+													<div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+														<div *ngIf="f.password.errors.required">Password is required</div>
+													</div>
+											</div>
+											<input type="submit" [disabled]="loading" value="Login" class="kiosk-login-btn">
+										</form>
 									</div>
+								</div>
 							</div>
-							<!-- New Customer End -->
-							<!-- Login Area Start -->
 							<div class="col-sm-6">
 								<div class="well">
 									<div class="kiosk-login">
@@ -60,52 +59,57 @@
 											<fieldset>
 												<legend>Your Personal Details</legend>
 												<div class="form-group">
-													<label class="control-label" for="f-name"><span class="require">*</span>First Name</label>
-													<input type="text" class="form-control" id="f-name" placeholder="First Name">
-                                        </div>
-													<div class="form-group">
-														<label class="control-label" for="l-name"><span class="require">*</span>Last Name</label>
-														<input type="text" class="form-control" id="l-name" placeholder="Last Name">
-                                        </div>
-														<div class="form-group">
-															<label class="control-label" for="email"><span class="require">*</span>Email</label>
-															<input type="email" class="form-control" id="email" placeholder="Email">
-                                        </div>
-															<div class="form-group">
-																<label class="control-label" for="number"><span class="require">*</span>Telephone</label>
-																<input type="email" class="form-control" id="number" placeholder="Telephone">
-                                        </div>
+													<label class="control-label" for="f-name"><span
+															class="require">*</span>First Name</label>
+													<input type="text" class="form-control" id="f-name"
+														placeholder="First Name">
+												</div>
+												<div class="form-group">
+													<label class="control-label" for="l-name"><span
+															class="require">*</span>Last Name</label>
+													<input type="text" class="form-control" id="l-name"
+														placeholder="Last Name">
+												</div>
+												<div class="form-group">
+													<label class="control-label" for="email"><span
+															class="require">*</span>Email</label>
+													<input type="email" class="form-control" id="email"
+														placeholder="Email">
+												</div>
+												<div class="form-group">
+													<label class="control-label" for="number"><span
+															class="require">*</span>Telephone</label>
+													<input type="email" class="form-control" id="number"
+														placeholder="Telephone">
+												</div>
 											</fieldset>
 											<fieldset>
 												<legend>Your Password</legend>
 												<div class="form-group">
-													<label class="control-label" for="pwd"><span class="require">*</span>Password:</label>
-													<input type="password" class="form-control" id="pwd" placeholder="Password">
-                                        </div>
-													<div class="form-group">
-														<label class="control-label" for="pwd-confirm"><span class="require">*</span>Confirm Password</label>
-														<input type="password" class="form-control" id="pwd-confirm" placeholder="Confirm password">
-                                        </div>
+													<label class="control-label" for="pwd"><span
+															class="require">*</span>Password:</label>
+													<input type="password" class="form-control" id="pwd"
+														placeholder="Password">
+												</div>
+												<div class="form-group">
+													<label class="control-label" for="pwd-confirm"><span
+															class="require">*</span>Confirm Password</label>
+													<input type="password" class="form-control" id="pwd-confirm"
+														placeholder="Confirm password">
+												</div>
 											</fieldset>
 											<div class="buttons kiosk-input-area">
 												<input type="submit" value="Submit" class="kiosk-button-field">
-                                    </div>
+											</div>
 										</form>
 									</div>
 								</div>
 							</div>
-							<!-- Login Area End -->
 						</div>
-						<!-- Row End -->
 					</div>
-					<!-- Container End -->
 				</div>
-
-				<!-- product Categorie List End -->
-
-
-<app-footer></app-footer>
+				<app-footer></app-footer>
+			</div>
+		</div>
 	</div>
-	</div>
-</div>
 </div>

@@ -7,24 +7,22 @@ import { Product } from '../../Product';
   styleUrls: ['./area.component.css']
 })
 export class AreaComponent implements OnInit {
-   searchText;
-
-selected: Product;
+  page = 1;
+  pageSize = 5;
+  selected: Product;
+  searchText;
   products: Product[];
-  
   constructor(
     private productService: ProductService
-  ) { 
-      console.log('constructor')
+  ) {
+    console.log('constructor')
   }
-
-ngOnInit(): void {
+  ngOnInit(): void {
     this.getProducts();
   }
-  getProducts(){
-   this.productService.getProducts().subscribe(data => {
- 
-     this.products = data;
+  getProducts() {
+    this.productService.getProducts().subscribe(data => {
+      this.products = data;
     });
   }
 }

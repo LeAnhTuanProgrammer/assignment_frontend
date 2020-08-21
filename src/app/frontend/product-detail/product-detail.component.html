@@ -1,30 +1,29 @@
+<div class="kiosk-header-top">
+    <div class="container">
 
- <div class="kiosk-header-top">
-<div class="container">
-
-<app-header></app-header>
-</div>
+        <app-header></app-header>
+    </div>
 </div>
 
 <div class="kiosk-header-bottom header-sticky">
-	<div class="container">
-		<div class="row">
-      <div class="col-xl-3 col-lg-2 col-sm-5 col-5">
-				<div class="logo">
-					<a href="home.html"><img src="https://i.ibb.co/y8c2Cvw/unnamed.png" width="50px"></a>
-				</div>
-			</div>
-<app-menu></app-menu>
-	<div class="slider-area kiosk-slider">
-			<h2>Show details</h2><br><br>
- <div *ngIf="product">
- <div class="kiosk-product-thumb">
-                            <div class="thumb-menu nav">
-                                    <a class="active" data-toggle="tab" href="#thumb1"> <img [src]="product.img" alt="kiosk-product-thumb"></a>
-                                   
-                            </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-2 col-sm-5 col-5">
+                <div class="logo">
+                    <a href="home.html"><img src="https://i.ibb.co/y8c2Cvw/unnamed.png" width="50px"></a>
+                </div>
+            </div>
+            <app-menu></app-menu>
+            <div class="slider-area kiosk-slider">
+                <h2>Show details</h2><br><br>
+                <div *ngIf="product">
+                    <div class="kiosk-product-thumb">
+                        <div class="thumb-menu nav">
+                            <a class="active" data-toggle="tab" href="#thumb1"> <img [src]="product.img"
+                                    alt="kiosk-product-thumb"></a>
                         </div>
-                          <div class="col-lg-7">
+                    </div>
+                    <div class="col-lg-7">
                         <div class="kiosk-product-description fix">
                             <h3 class="product-header head-h3">{{product.name}}</h3>
                             <div class="pro-price mb-10">
@@ -45,9 +44,9 @@
                             </div>
                         </div>
                     </div>
- </div>
-<app-footer></app-footer>
-	</div>
-	</div>
-</div>
+                </div>
+                <app-footer></app-footer>
+            </div>
+        </div>
+    </div>
 </div>

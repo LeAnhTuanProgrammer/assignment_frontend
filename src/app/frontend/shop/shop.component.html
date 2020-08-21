@@ -1,119 +1,91 @@
 <div class="kiosk-header-top">
-<div class="container">
-
-<app-header></app-header>
+	<div class="container">
+		<app-header></app-header>
+	</div>
 </div>
-</div>
-
 <div class="kiosk-header-bottom header-sticky">
 	<div class="container">
 		<div class="row">
-      <div class="col-xl-3 col-lg-2 col-sm-5 col-5">
+			<div class="col-xl-3 col-lg-2 col-sm-5 col-5">
 				<div class="logo">
 					<a href="home.html"><img src="https://i.ibb.co/y8c2Cvw/unnamed.png" width="50px"></a>
 				</div>
 			</div>
-<app-menu></app-menu>
-	<div class="slider-area kiosk-slider">
-				
-
-
-			<div class="container">
-				<div class="breadcrumb">
-					<ul>
-						<li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-						<li class="active"><a routerLink="/shop" routerLinkActive="active">Shop</a></li>
-					</ul>
+			<app-menu></app-menu>
+			<div class="slider-area kiosk-slider">
+				<div class="container">
+					<div class="breadcrumb">
+						<ul>
+							<li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+							<li class="active"><a routerLink="/shop" routerLinkActive="active">Shop</a></li>
+						</ul>
+					</div>
 				</div>
-			</div>
-			<!-- Container End -->
-	
-
-		<!-- Grid & List View Start -->
-		<div class="grid-list-top fix mb-10">
-			<!-- Toolbar Short Area Start -->
-			<div class="main-toolbar-sorter f-left">
-				<div class="toolbar-sorter">
-					<label>sort by</label>
-					<select class="sorter" name="sorter">
-                                        <option value="Position" selected="selected">position</option>
-                                        <option value="Product Name">Heighest price</option>
-                                        <option value="Price">Lowest Price</option>
-                                    </select>
+				<div class="grid-list-top fix mb-10">
+					<div class="main-toolbar-sorter f-left">
+						<div class="toolbar-sorter">
+							<label>sort by</label>
+							<select class="sorter" name="sorter">
+								<option value="Position" selected="selected">position</option>
+								<option value="Product Name">Heighest price</option>
+								<option value="Price">Lowest Price</option>
+							</select>
+						</div>
+					</div>
 				</div>
-			</div>
-			<!-- Toolbar Short Area End -->
-
-		</div>
-		<!-- Grid & List View End -->
-		<div class="main-categorie product-area">
-			<!-- Grid & List Main Area End -->
-			<div class="tab-content fix">
-				<div id="grid-view" class="tab-pane active">
-					<div class="row">
-						<!-- Single Product Start -->
-						<div class="col-lg-4 col-sm-6" *ngFor="let product of products">
-							<div routerLink="/product/{{product.id}}">
-								<!-- Product Image Start -->
-								<div class="kiosk-product-img">
-									<a routerLink="/product/{{product.id}}">
-										<img class="first-img" [src]="product.img" alt="single-product">
-									
-                                                    </a>
-								</div>
-								<!-- Product Image End -->
-								<!-- Product Content Start -->
-								<div class="kiosk-product-content">
-									<p><span class="price">${{product.price}}</span></p>
-									<h4><a routerLink="/product/edit/{{product.id}}">{{product.name}}</a></h4>
-									<div class="kiosk-product-action">
-										<div class="kiosk-action-content">
-											<a routerLink="/product/{{product.id}}" data-toggle="tooltip"
-												title="Product Details"><i class="fa fa-link"></i></a>
+				<div class="main-categorie product-area">
+					<div class="tab-content fix">
+						<div id="grid-view" class="tab-pane active">
+							<div class="row">
+								<div class="col-lg-4 col-sm-6" *ngFor="let product of products">
+									<div routerLink="/product/{{product.id}}">
+										<div class="kiosk-product-img">
+											<a routerLink="/product/{{product.id}}">
+												<img class="first-img" [src]="product.img" alt="single-product">
+											</a>
+										</div>
+										<div class="kiosk-product-content">
+											<p><span class="price">${{product.price}}</span></p>
+											<h4><a routerLink="/product/edit/{{product.id}}">{{product.name}}</a></h4>
+											<div class="kiosk-product-action">
+												<div class="kiosk-action-content">
+													<a routerLink="/product/{{product.id}}" data-toggle="tooltip"
+														title="Product Details"><i class="fa fa-link"></i></a>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
-								<!-- Product Content End -->
 							</div>
 						</div>
-				
 					</div>
-					<!-- #list view End -->
+					<ngb-pagination [(page)]="page" [pageSize]="" class="d-flex justify-content-center"
+						[collectionSize]=""></ngb-pagination>
 				</div>
-				<!-- Grid & List Main Area End -->
-			</div>
-			<!--Breadcrumb and Page Show Start -->
-	 <ngb-pagination
-  [(page)]="page"
-  [pageSize]="" class="d-flex justify-content-center"
-  [collectionSize]=""></ngb-pagination>
-			<!--Breadcrumb and Page Show End -->
-		</div>
-
-		<!-- product Categorie List End -->
-		<div class="kiosk-newsletter-area ptb-70">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 mr-auto ml-auto">
-						<div class="newsletter text-center">
-							<div class="main-news-desc">
-								<div class="news-desc">
-									<h3>Sign Up To Newsletter</h3>
+				<div class="kiosk-newsletter-area ptb-70">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6 mr-auto ml-auto">
+								<div class="newsletter text-center">
+									<div class="main-news-desc">
+										<div class="news-desc">
+											<h3>Sign Up To Newsletter</h3>
+										</div>
+									</div>
+									<div class="kiosk-subscribe">
+										<form action="#">
+											<input class="subscribe" placeholder="Enter your email address" name="email"
+												id="subscribe" type="text" w>
+											<button type="submit" class="submit">subscribe</button>
+										</form>
+									</div>
 								</div>
 							</div>
-							<div class="kiosk-subscribe">
-								<form action="#">
-									<input class="subscribe" placeholder="Enter your email address" name="email" id="subscribe" type="text" w>
-									<button type="submit" class="submit">subscribe</button>
-								</form>
-							</div>
 						</div>
 					</div>
 				</div>
+				<app-footer></app-footer>
 			</div>
 		</div>
-<app-footer></app-footer>
 	</div>
-	</div>
-</div>
 </div>

@@ -1,35 +1,36 @@
-<form [formGroup]="addProductsForm" >
- <br>
-    
-    <h4>Add new products</h4>
-     <br>
-   
-       <div class="col-md-6">
-       
-           
-         <label for=""></label>
-         <input type="text" name="name" formControlName="name" [ngClass]="{ 'is-invalid': submitted && form.name.errors }" placeholder=" Name" [(ngModel)]="product.name"> 
-         <div *ngIf="submitted && form.name.errors" class="invalid-feedback">
-            <div *ngIf="form.name.errors.required">Tên không được để trống!</div>
-         </div>
-         <br> <br>
-         <input type="text" name="price" formControlName="price" [ngClass]="{ 'is-invalid': submitted && form.price.errors }" placeholder="Price" [(ngModel)]="product.price">
-         <div *ngIf="submitted && form.price.errors" class="invalid-feedback">
-            <div *ngIf="form.price.errors.required">Gía không được để trống!</div>
-         </div>
-         <br> <br>
-         <input type="text" name="desc"  formControlName="desc" [ngClass]="{ 'is-invalid': submitted && form.desc.errors }" placeholder="Desc" [(ngModel)]="product.desc">
-         <div *ngIf="submitted && form.desc.errors" class="invalid-feedback">
-            <div *ngIf="form.desc.errors.required">Nội dung không được để trống!</div>
-         </div>
-   <br><br>
-         <input type="text" name="img" formControlName="img" [ngClass]="{ 'is-invalid': submitted && form.img.errors }" placeholder="Img" [(ngModel)]="product.img"> 
-         <div *ngIf="submitted && form.img.errors" class="invalid-feedback">
-            <div *ngIf="form.img.errors.required">ảnh không được để trống!</div>
-         </div>
-         <br>
-         <br>
-
-  <button type="submit"  ng-disabled="loading"  class="btn btn-primary" (click)="onSubmit()">Add new</button>
-     </div>
-   </form>
+<form [formGroup]="addProductsForm">
+   <br>
+   <h4>Add new products</h4>
+   <br>
+   <div class="col-md-6">
+      <label for=""></label>
+      <input type="text" name="name" formControlName="name" [ngClass]="{ 'is-invalid': submitted && form.name.errors }" 
+         placeholder=" Name" [(ngModel)]="product.name">
+      <div *ngIf="submitted && form.name.errors" class="invalid-feedback">
+         <div *ngIf="form.name.errors.required">Tên không được để trống!</div>
+         <div *ngIf="form.name.errors.minlength">Tên Phải có 4 ký tự trở lên!</div>
+      </div>
+      <br> <br>
+      <input type="number" name="price" formControlName="price"
+         [ngClass]="{ 'is-invalid': submitted && form.price.errors }" placeholder="Price" [(ngModel)]="product.price">
+      <div *ngIf="submitted && form.price.errors" class="invalid-feedback">
+         <div *ngIf="form.price.errors.required">Gía không được để trống!</div>
+         <div *ngIf="form.price.errors.min">Gía không được âm!</div>
+      </div>
+      <br> <br>
+      <input type="text" name="desc" formControlName="desc" [ngClass]="{ 'is-invalid': submitted && form.desc.errors }"
+         placeholder="Desc" [(ngModel)]="product.desc">
+      <div *ngIf="submitted && form.desc.errors" class="invalid-feedback">
+         <div *ngIf="form.desc.errors.required">Nội dung không được để trống!</div>
+      </div>
+      <br><br>
+      <input type="text" name="img" formControlName="img" [ngClass]="{ 'is-invalid': submitted && form.img.errors }"
+         placeholder="Img" [(ngModel)]="product.img">
+      <div *ngIf="submitted && form.img.errors" class="invalid-feedback">
+         <div *ngIf="form.img.errors.required">Hình ảnh không được để trống link!</div>
+      </div>
+      <br>
+      <br>
+      <button type="submit" ng-disabled="loading" class="btn btn-primary" (click)="onSubmit()">Add new</button>
+   </div>
+</form>

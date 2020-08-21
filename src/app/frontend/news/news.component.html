@@ -1,20 +1,18 @@
 <div class="kiosk-header-top">
 	<div class="container">
-	
-	<app-header></app-header>
+		<app-header></app-header>
 	</div>
-	</div>
-	
-	<div class="kiosk-header-bottom header-sticky">
-		<div class="container">
-			<div class="row">
-		  <div class="col-xl-3 col-lg-2 col-sm-5 col-5">
-					<div class="logo">
-						<a href="home.html"><img src="https://i.ibb.co/y8c2Cvw/unnamed.png" width="50px"></a>
-					</div>
+</div>
+<div class="kiosk-header-bottom header-sticky">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-3 col-lg-2 col-sm-5 col-5">
+				<div class="logo">
+					<a href="home.html"><img src="https://i.ibb.co/y8c2Cvw/unnamed.png" width="50px"></a>
 				</div>
-	<app-menu></app-menu>
-		<div class="slider-area kiosk-slider">
+			</div>
+			<app-menu></app-menu>
+			<div class="slider-area kiosk-slider">
 				<div class="container">
 					<div class="breadcrumb">
 						<ul>
@@ -23,61 +21,41 @@
 						</ul>
 					</div>
 				</div>
-				<!-- Container End -->
-			
-			
-	
-	
-						<!-- Product Area End -->
-						<!-- Product Area Start -->
-						<div class="product-area ptb-70">
-							<div class="container">
-								<div class="row">
-									<div class="section-title col-lg-12">
-										<h2>News<i class="fa fa-shopping-cart"></i></h2>
+				<div class="product-area ptb-70">
+					<div class="container">
+						<div class="row">
+							<div class="section-title col-lg-12">
+								<h2>News<i class="fa fa-shopping-cart"></i></h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-3 col-sm-6" *ngFor="let News of news">
+								<div class="single-product">
+									<div class="kiosk-product-img">
+										<a routerLink="/News/{{News.id}}">
+											<img class="first-img" [src]="News.img" alt="single-product">
+										</a>
 									</div>
-								</div>
-								<div class="row">
-	
-									<div class="col-lg-3 col-sm-6" *ngFor="let News of news">
-										<div class="single-product">
-											<!-- Product Image Start -->
-											<div class="kiosk-product-img">
-												<a routerLink="/News/{{News.id}}">
-													<img class="first-img" [src]="News.img" alt="single-product">
-												
-									</a>
+									<div class="kiosk-product-content">
+										<p><a routerLink="/News/{{News.id}}" class="name">{{News.name}}</a></p>
+										<h4><span class="content">{{News.desc}}</span></h4>
+										<div class="kiosk-product-action">
+											<div class="kiosk-action-content">
+												<a href="wishlist.html" data-toggle="tooltip"
+													title="Add to Wishlist"><i></i></a>
+												<a href="cart.html" data-toggle="tooltip"
+													title="Add to Cart"><i></i></a>
+												<a routerLink="/News/{{News.id}}" title="Product Details"><i></i></a>
 											</div>
-											<!-- Product Image End -->
-											<!-- Product Content Start -->
-											<div class="kiosk-product-content">
-												<p><a routerLink="/News/{{News.id}}" class="name">{{News.name}}</a></p>
-												<h4><span class="content">{{News.desc}}</span></h4>
-												<div class="kiosk-product-action">
-													<div class="kiosk-action-content">
-														<a href="wishlist.html" data-toggle="tooltip"
-															title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-														<a href="cart.html" data-toggle="tooltip"
-															title="Add to Cart"><i class="fa fa-shopping-cart"></i></a>
-														<a routerLink="/News/{{News.id}}" data-toggle="tooltip"
-															title="Product Details"><i class="fa fa-link"></i></a>
-													</div>
-												</div>
-											</div>
-											<!-- Product Content End -->
 										</div>
 									</div>
-	
 								</div>
 							</div>
 						</div>
-						<!-- Parallax Area End -->
-	
-						<!-- New Products Start -->
-				
-				
-	<app-footer></app-footer>
-		</div>
+					</div>
+				</div>
+				<app-footer></app-footer>
+			</div>
 		</div>
 	</div>
-	</div>
+</div>

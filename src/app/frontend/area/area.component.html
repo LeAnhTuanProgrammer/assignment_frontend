@@ -1,148 +1,89 @@
-	<div class="product-area ptb-70">
-						<div class="container">
-							<div class="row">
-								<div class="section-title col-lg-12">
-									<h2>Featured Products <i class="fa fa-shopping-cart"></i></h2>
-								</div>
-							</div>
-							<div class="row">
-
-								<div class="col-lg-3 col-sm-6" *ngFor="let product of products | filter:searchText">
-									<div class="single-product">
-										<!-- Product Image Start -->
-										<div class="kiosk-product-img">
-											<a routerLink="/product/{{product.id}}">
-												<img class="first-img" [src]="product.img" alt="single-product">
-											
-                                </a>
-										</div>
-										<!-- Product Image End -->
-										<!-- Product Content Start -->
-										<div class="kiosk-product-content">
-											<p><span class="price">${{product.price}}</span></p>
-											<h4><a routerLink="/product/{{product.id}}">{{product.name}}</a></h4>
-											<div class="kiosk-product-action">
-												<div class="kiosk-action-content">
-													<a routerLink="/checkout" routerLinkActive="active" data-toggle="tooltip"
-														title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-													<a routerLink="/cart" routerLinkActive="active" data-toggle="tooltip"
-														title="Add to Cart"><i class="fa fa-shopping-cart"></i></a>
-													<a routerLink="/product/{{product.id}}" data-toggle="tooltip"
-														title="Product Details"><i class="fa fa-link"></i></a>
-												</div>
-											</div>
-										</div>
-										<!-- Product Content End -->
-									</div>
-								</div>
-
+<div>
+	<div>
+		<div>
+			<h3>Tìm kiếm:<input type="text" class="Search" [(ngModel)]="searchText" autocomplete="off"
+					placeholder="Tìm kiếm sản phẩm và mức giá theo mong muốn!"></h3>
+		</div>
+	</div>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="section-title col-lg-12">
+				<h2>Featured Products <i class="fa fa-shopping-cart"></i></h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3 col-sm-6" *ngFor="let product of products | filter:searchText ">
+				<div class="single-product">
+					<div class="kiosk-product-img">
+						<a routerLink="/product/{{product.id}}">
+							<img class="first-img" [src]="product.img" alt="single-product">
+						</a>
+					</div>
+					<div class="kiosk-product-content">
+						<p><span class="price">${{product.price}}</span></p>
+						<h4><a routerLink="/product/{{product.id}}">{{product.name}}</a></h4>
+						<div class="kiosk-product-action">
+							<div class="kiosk-action-content">
+								<a routerLink="/checkout" routerLinkActive="active" data-toggle="tooltip"
+									title="Add to Wishlist"><i class="fa fa-heart"></i></a>
+								<a routerLink="/cart" routerLinkActive="active" data-toggle="tooltip"
+									title="Add to Cart"><i class="fa fa-shopping-cart"></i></a>
+								<a routerLink="/product/{{product.id}}" data-toggle="tooltip" title="Product Details"><i
+										class="fa fa-link"></i></a>
 							</div>
 						</div>
 					</div>
-          		<div class="new-products ptb-70">
-						<div class="container">
-							<div class="row">
-								<div class="section-title col-lg-12 ">
-									<h2>Our Collections <i class="fa fa-shopping-cart"></i></h2>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xl-12 col-lg-6 " >
-									<!-- New Pro Content End -->
-									<div class="new-kiosk-product-content">
-										<div class="kiosk-tab-header tab-bg">
-											<!-- Featured Product List Item Start -->
-											<ul class="nav product-list product-tab-list">
-												<li><a class="active" data-toggle="tab" href="#new-arrival">New
-														Arrivals</a></li>
-												<li><a data-toggle="tab" href="#toprated">Best Sale</a></li>
-												<li><a data-toggle="tab" href="#new-arrival">Top Rated</a></li>
-											</ul>
-										</div>
-										<div class="tab-content product-tab-content jump mt-30">
-											<div id="new-arrival" class="tab-pane active">
-												<!-- New Products Activation Start -->
-												<div class="kiosk-collection owl-carousel">
-													<!-- Single Product Start -->
-													<div class="single-product" *ngFor="let product of products">
-														<!-- Product Image Start -->
-														<div class="kiosk-product-img">
-															<a routerLink="/product/{{product.id}}">
-																<img class="first-img" [src]="product.img" alt="single-product">
-															
-                                                </a>
-														</div>
-														<!-- Product Image End -->
-														<!-- Product Content Start -->
-														<div class="kiosk-product-content">
-															<p><span class="price">${{product.price}}</span></p>
-															<h4><a
-																	routerLink="/product/{{product.id}}">{{product.name}}</a>
-															</h4>
-															<div class="kiosk-product-action">
-																<div class="kiosk-action-content">
-																	<a routerLink="/checkout" routerLinkActive="active" data-toggle="tooltip"
-																		title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-																	<a routerLink="/cart" routerLinkActive="active" data-toggle="tooltip"
-																		title="Add to Cart"><i class="fa fa-shopping-cart"></i></a>
-																	<a routerLink="/product/{{product.id}}"
-																		data-toggle="tooltip"
-																		title="Product Details"><i class="fa fa-link"></i></a>
-																</div>
-															</div>
-														</div>
-													</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-												</div>
 
-											</div>
-											<!-- New Products End -->
-											<div id="toprated" class="tab-pane">
-												<!-- New Products Activation Start -->
-												<div class="kiosk-collection owl-carousel">
-													<!-- Single Product Start -->
-													<div class="single-product" *ngFor="let product of products">
-														<!-- Product Image Start -->
-														<div class="kiosk-product-img">
-															<a routerLink="/product/{{product.id}}">
-																<img class="first-img" [src]="product.img" alt="single-product">
-																<img class="second-img" [src]="product.img" alt="single-product">
-                                                </a>
-														</div>
-														<!-- Product Image End -->
-														<!-- Product Content Start -->
-														<div class="kiosk-product-content">
-															<p><span class="price">${{product.price}}</span></p>
-															<h4><a
-																	routerLink="/product/{{product.id}}">{{product.name}}</a>
-															</h4>
-															<div class="kiosk-product-action">
-																<div class="kiosk-action-content">
-																	<a href="wishlist.html" data-toggle="tooltip"
-																		title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-																	<a href="cart.html" data-toggle="tooltip"
-																		title="Add to Cart"><i class="fa fa-shopping-cart"></i></a>
-																	<a routerLink="/product/{{product.id}}"
-																		data-toggle="tooltip"
-																		title="Product Details"><i class="fa fa-link"></i></a>
-																</div>
-															</div>
-														</div>
+<div class="new-products ptb-70">
+	<div class="container">
+		<div class="row">
+			<div class="section-title col-lg-12 ">
+				<h2>Our Collections <i class="fa fa-shopping-cart"></i></h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-12 col-lg-12 ">
+				<div class="kiosk-tab-header tab-bg">
+					<ul class="nav product-list product-tab-list">
+						<li><a class="active" data-toggle="tab" href="#new-arrival">New
+								Arrivals</a></li>
+						<li><a data-toggle="tab" href="#toprated">Best Sale</a></li>
+						<li><a data-toggle="tab" href="#new-arrival">Top Rated</a></li>
+					</ul>
+				</div>
+			</div>
+			<br>
+			<div class="col-lg-3 col-sm-6" *ngFor="let product of products | filter:searchText ">
 
-													</div>
-
-												</div>
-
-											</div>
-										</div>
-
-									</div>
-
-								</div>
-							</div>
-
-						</div>
-
+				<div class="single-product">
+					<div class="kiosk-product-img">
+						<a routerLink="/product/{{product.id}}">
+							<img class="first-img" [src]="product.img" alt="single-product">
+						</a>
 					</div>
-       
- 
+					<div class="kiosk-product-content">
+						<p><span class="price">${{product.price}}</span></p>
+						<h4><a routerLink="/product/{{product.id}}">{{product.name}}</a></h4>
+						<div class="kiosk-product-action">
+							<div class="kiosk-action-content">
+								<a routerLink="/checkout" routerLinkActive="active" data-toggle="tooltip"
+									title="Add to Wishlist"><i class="fa fa-heart"></i></a>
+								<a routerLink="/cart" routerLinkActive="active" data-toggle="tooltip"
+									title="Add to Cart"><i class="fa fa-shopping-cart"></i></a>
+								<a routerLink="/product/{{product.id}}" data-toggle="tooltip" title="Product Details"><i
+										class="fa fa-link"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

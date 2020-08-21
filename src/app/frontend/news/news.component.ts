@@ -15,13 +15,11 @@ selected: News;
   ) { 
       console.log('constructor')
   }
-
 ngOnInit(): void {
     this.getProducts();
   }
   getProducts(){
    this.newService.getProducts().subscribe(data => {
- 
      this.news = data;
     });
   }

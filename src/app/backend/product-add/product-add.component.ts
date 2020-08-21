@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../../Product';
 import { ProductService } from '../../product.service';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup,Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-product-add',
@@ -12,42 +12,30 @@ import { FormBuilder, FormGroup,Validators } from '@angular/forms';
 export class ProductAddComponent implements OnInit {
   addProductsForm: FormGroup;
   submitted = false;
- product: Product = new Product();
+  product: Product = new Product();
   constructor(
-  
     private productService: ProductService,
     private router: Router,
     private FormBuilder: FormBuilder
   ) { }
-
   ngOnInit() {
     this.addProductsForm = this.FormBuilder.group({
-      name: ['', Validators.required],
-      price: ['', Validators.required],
+      name: ['', [Validators.required, Validators.minLength(4)]],
+      price: ['', [Validators.required,Validators.min(0)]],
       desc: ['', Validators.required],
       img: ['', Validators.required]
-     
-      // email: ['', [Validators.required, Validators.email]],
-      // password: ['', [Validators.required, Validators.minLength(6)]]
-  });
+    });
   }
   get form() { return this.addProductsForm.controls; }
-
+  //gt điều khiển biểu mẫu.
   onSubmit() {
     this.submitted = true;
-
-   
     if (this.addProductsForm.invalid) {
-        return;
+      return;
     }
-    this.productService.addProduct(this.product).subscribe(data =>{
+    this.productService.addProduct(this.product).subscribe(data => {
       this.router.navigateByUrl("/admin/manager")
-   } );
-   
-}
-  addProduct(){
-    this.productService.addProduct(this.product).subscribe(data =>{
-       this.router.navigateByUrl("/admin/manager")
-    } );
+    });
+
   }
 }
